@@ -52,11 +52,35 @@ The application strictly follows a hierarchical flow as defined in the project s
 
 ---
 
-## 🛠️ Key Features
-- **Real-time Status Updates:** Polling mechanism for instant delivery tracking.
-- **Membership Validation:** Automated duration logic for vendors.
-- **Secure Authentication:** Hidden password inputs and role-protected routes.
-- **High-Contrast UI:** Premium Blue-and-White theme for maximum readability and professional aesthetics.
+## 💡 Detailed Functionalities
+
+### 1. Authentication & Role Security
+- **Multi-Role Support:** Distinct dashboards for Admin, Vendor, and User roles.
+- **Session Persistence:** Users remain logged in securely throughout their session using `express-session`.
+- **Security Standards:** Password inputs are masked (`type="password"`) on all login and registration screens.
+
+### 2. User Experience (The "Customer" Flow)
+- **Smart Shopping:** Users can filter vendors by specialty (e.g., Florist, Catering) and view high-quality item catalogs with real pricing.
+- **Cart Logic:** A dynamic shopping cart that calculates individual item totals and a grand total in real-time.
+- **Guest Management:** A dedicated "Guest List" tool allowing users to track their event attendees with private Update/Delete controls.
+- **Check Status:** A simplified, read-only tracking table where users see their order's journey from "Received" to "Out for Delivery".
+
+### 3. Vendor Operations (The "Business" Flow)
+- **Catalog Control:** Vendors have full CRUD power over their product list, including image uploads and price management.
+- **Status Console:** A powerful modal-driven interface allowing vendors to update order states. These changes propagate instantly to the user's view.
+- **Transaction History:** Vendors can monitor all incoming requests and user interactions in a unified module.
+
+### 4. Admin Oversight (The "Maintenance" Flow)
+- **Membership Engine:** A strict logic-driven system for managing vendor subscriptions. Supports adding memberships (default 6 months) and extending them (default 6-month extension).
+- **System Maintenance:** Exclusive access to the Maintenance Menu, which is the mandatory foundation for creating system-wide reports and transactions.
+- **User/Vendor Management:** A centralized console for onboarding or managing all platform participants.
+
+---
+
+## 🛠️ Key Technical Features
+- **Real-time Data Polling:** Automated 5-second refreshes on status pages for "live" tracking without page reloads.
+- **High-Contrast Design:** A premium Blue-on-White aesthetic designed for professional clarity and modern appeal.
+- **Backend Validations:** Every form submission is validated both on the client (required fields) and server (Mongoose schemas).
 
 ---
 
